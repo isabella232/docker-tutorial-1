@@ -6,15 +6,13 @@ var express = require('express'),
     methodOverride = require('method-override'),
     app = express(),
     server = require('http').Server(app),
-    io = require('socket.io')(server),
-    request = require('request-json');
+    io = require('socket.io')(server);
 
 io.set('transports', ['polling']);
 
 var port = process.env.PORT || 4000;
 
 io.sockets.on('connection', function (socket) {
-
   socket.emit('message', { text : 'Welcome!' });
 
   socket.on('subscribe', function (data) {
@@ -43,23 +41,6 @@ async.retry(
   }
 );
 
-function postBirthday() {
-  if(query && query.vote != "Cat"){
-    var client = request.createClient('http://dockerize.it/');
-    client.post('competition',
-    query,function(err, res, body){
-      if(err) console.log("error:"+err);
-      if(res.statusCode == 200) {
-        var body = res.body.response;
-        console.log(body);
-      }
-    });
-  } else {
-    console.log('Please update example-voting-app/result-app/views/config.json before submitting your entry.');
-    console.log('You will need to change the name, location, repository names, and vote.');
-    console.log('You will need to stop this container and remove it, then run docker-compose up -d again.');
-  }
-}
 
 function getVotes(client) {
   client.query('SELECT vote, COUNT(id) AS count FROM votes GROUP BY vote', [], function(err, result) {
@@ -94,8 +75,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/postconfig', function(req,res) {
-
-  postBirthday();
   res.sendStatus(200);
 }
 );
@@ -108,7 +87,6 @@ app.get('/getconfig', function(req,res){
 });
 
 server.listen(port, function () {
-
   var port = server.address().port;
   console.log('App running on port ' + port);
 });
