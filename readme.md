@@ -23,9 +23,9 @@ There will be a self-paced beginners’ tutorial for attendees to learn Docker b
 ### Pre-tutorial preparation
 At the training, you will need to bring your own computer. There are some steps you should do some preparation to get your work environment ready. Here are the steps:
 
-1. For Linux users, we need you to install [Docker engine MacOS] (https://docs.docker.com/docker-for-mac/install/) and [Docker engine Windows] (https://docs.docker.com/docker-for-windows/install/)
-[Docker compose] (https://docs.docker.com/compose/install/).
+1. For Linux users, we need you to install [Docker engine MacOS](https://docs.docker.com/docker-for-mac/install/) and [Docker engine Windows](https://docs.docker.com/docker-for-windows/install/)
+[Docker compose](https://docs.docker.com/compose/install/).
 
-1. For PC and Mac users we need you to install [Docker toolbox for Mac and Windows](https://www.docker.com/products/docker-toolbox) and use [Docker Machine] (https://docs.docker.com/machine/get-started/) to create a virtual machine to run your Docker containers. Once your machine is created and you have connected your shell to this new machine, you're ready to run Docker commands on this host.  If you're using Linux you can skip to the next step.
+1. For PC and Mac users we need you to install [Docker toolbox for Mac and Windows](https://www.docker.com/products/docker-toolbox) and use [Docker Machine](https://docs.docker.com/machine/get-started/) to create a virtual machine to run your Docker containers. Once your machine is created and you have connected your shell to this new machine, you're ready to run Docker commands on this host.  If you're using Linux you can skip to the next step.
 
-And now you're ready. See you at the birthday party!<a name="challenge"></a>
+And now you're ready. See you at the meetup!
