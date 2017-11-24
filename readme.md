@@ -2,12 +2,11 @@
 
 
 ### About the Docker tutorial :whale2: :boat:
- [Linux](https://www.youtube.com/watch?v=V9AKvZZCWLc)
-- [Training materials](#training-materials)
+- [Docker App Architecture](#Docker-App-Architecture)
 - [Pre-tutorial preparation](#pre-tutorial-preparation)
 - [Tutorial guidelines](./tutorial.md)
 
-### Training materials:
+### Docker App Architecture:
 
 Participants in the training will go through the steps involved in running and developing a simple voting app from a fresh computer using the Docker Toolbox. This simple app will include:
 
