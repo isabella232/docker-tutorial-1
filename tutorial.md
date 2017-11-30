@@ -40,7 +40,7 @@ This document contains a series of several sections, each of which explains a pa
     -   [2.2 Docker Images](#docker-images)
     -   [2.3 Our First Image](#our-image)
     -   [2.4 Dockerfile](#dockerfiles)
--  [3.0 Birthday training](#dockercompetition)
+-  [3.0 Docker training](#dockercompetition)
   - [3.1 Pull voting-app images](#pullimage)
   - [3.2 Customize the App](#customize)
     - [3.2.1 Modify app.py](#modifyapp)
@@ -48,7 +48,7 @@ This document contains a series of several sections, each of which explains a pa
     - [3.2.3 Building and running the app](#buildvotingapp)
     - [3.2.4 Build and tag images](#buildandtag)
     - [3.2.5 Push images to Docker Hub](#pushimages)
--  [4.0 Next Steps: bla bla](#wrap-up)
+-  [4.0 You made it!](#wrap-up)
 -  [References](#references)
 
 
@@ -66,7 +66,8 @@ There are no specific skills needed for this tutorial beyond a basic comfort wit
 ### Setting up your computer
 Getting all the tooling setup on your computer can be a daunting task, but thankfully getting Docker up and running on your favorite OS has become very easy.
 
-The *getting started* guide on Docker has detailed instructions for setting up Docker on [Mac](https://www.docker.com/docker-mac), [Linux](https://www.docker.com//docker-ubuntu) and [Windows](https://www.docker.com/docker-windows).
+The *getting started* guide on Docker has detailed instructions for setting up Docker on [Mac](https://www.docker.com/docker-mac), [Linux](https://www.docker.com//docker-ubuntu) and [Windows 10 Pro](https://www.docker.com/docker-windows). 
+For other versions of Windows; please read this [Gist](https://gist.github.com/dennis-bell/bdaf6f84478ec4a0e73f52f8020f9dea) with more information and a how-to.
 
 Once you are done installing Docker, test your Docker installation by running the following:
 ```
@@ -98,7 +99,7 @@ The `pull` command fetches the alpine **image** from the **Docker registry** and
 ```
 $ docker images
 REPOSITORY              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-alpine                 latest              c51f86c28340        4 weeks ago         1.109 MB
+alpine                  latest              c51f86c28340        4 weeks ago         1.109 MB
 hello-world             latest              690ed74de00f        5 months ago        960 B
 ```
 
@@ -556,7 +557,7 @@ $ docker run -p 8888:5000 --name myfirstapp YOUR_USERNAME/myfirstapp
  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
 ```
 
-Head over to `http://<DOCKER_HOST-IP-ADDRESS>:8888` and your app should be live.
+Head over to [http://localhost:8888](http://localhost:8888) and your app should be live.
 
 <img src="https://raw.githubusercontent.com/merapar/docker-tutorial/master/tutorial-images/catgif.png" title="static">
 
@@ -572,7 +573,8 @@ $ docker rm myfirstapp
 ```
 
 <a id="dockercompetition"></a>
-## 3.0 Docker Birthday Training
+## 3.0 Docker Training
+_This part of the original tuorial _  
 This portion of the tutorial will guide you through the creation and customization of a voting app. It's important that you follow the steps in order, and make sure to customize the portions that are customizable.
 
 **Important.**
@@ -724,11 +726,11 @@ This tells Compose to start all the containers specified in the `docker-compose.
 It will take a couple minutes to build the containers, create the network and launch everything.
 **NOTE**: That for MacOS /var -> private/var and /tmp -> private/tmp, update the different paths in the `docker-compose.yml` accordingly.
 
-Navigate to `http://localhost:5000` in your browser, and you'll see the voting app, something like this:
+Navigate to [http://localhost:5000](http://localhost:5000) in your browser, and you'll see the voting app, something like this:
 
 <img src="https://raw.githubusercontent.com/merapar/docker-tutorial/master/tutorial-images/vote.png" title="vote">
 
-Click on one to vote. You can check the results at `http://localhost:5001>`.
+Click on one to vote. You can check the results at [http://localhost:5001](http://localhost:5001).
 
 **NOTE**: If you are running this tutorial in a cloud environment like AWS, Azure, Digital Ocean, or GCE you will not have direct access to localhost or 127.0.0.1 via a browser.  A work around for this is to leverage ssh port forwarding.  Below is an example for Mac OS.  Similarly this can be done for Windows and Putty users.
 
@@ -761,34 +763,6 @@ $ docker push <YOUR_DOCKER_ID>/votingapp_voting-app
 $ docker push <YOUR_DOCKER_ID>/votingapp_result-app
 ...
 ```
-
-<a id="confirmtraining"></a>
-### 3.3 Confirm your completion
-
-Once you're completed steps 3.1 through 3.2.5 you can submit your application. It's very easy to do so.
-
-Get the *ID* of the running container running from image *examplevotingapp_result-app*:
-
-```
-$ docker ps -a | grep votingapp_result-app
-SOME_ID        examplevotingapp_result-app   "node server.js"    3 minutes ago       Up 3 minutes        0.0.0.0:5001->80/tcp   compassionate_golick
-```
-
-Access the log files for the container **SOME_ID** using the following command:
-
-```
-$ docker logs -f SOME_ID
-Thu, 10 Mar 2016 21:48:15 GMT body-parser deprecated bodyParser: use individual json/urlencoded middlewares at server.js:77:9
-Thu, 10 Mar 2016 21:48:16 GMT body-parser deprecated undefined extended: provide extended option at node_modules/body-parser/index.js:105:29
-App running on port 80
-Connected to db
-```
-
-Open a browser and access <YOUR_IP_ADDRESS>:5001/merapar.html.
-
-The page displayed will look like the one below:
-
-<img src="https://raw.githubusercontent.com/merapar/docker-tutorial/master/tutorial-images/submit_work.png" title="static">
 
 <a id="wrap-up"></a>
 ## 4.0 You made it!
