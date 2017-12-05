@@ -1,6 +1,5 @@
 <a id="top"></a>
 <img src="https://raw.githubusercontent.com/merapar/docker-tutorial/master/tutorial-images/logo.png" alt="docker logo">
-
 ### Thanks Docker for creating this tutorial, source is available at:
 https://github.com/merapar/docker-tutorial
 
@@ -290,11 +289,11 @@ For simplicity, you can think of an image akin to a git repository - images can 
 
 For example, you can pull a specific version of `ubuntu` image as follows:
 
+**NOTE**: Do not execute the below command. It is only for your reference.
+
 ```
 $ docker pull ubuntu:12.04
 ```
-
-**NOTE**: Do not execute the above command. It is only for your reference.
 
 If you do not specify the version number of the image, then as mentioned the Docker client will default to a version named `latest`.
 
@@ -574,7 +573,8 @@ $ docker rm myfirstapp
 
 <a id="dockercompetition"></a>
 ## 3.0 Docker Training
-_This part of the original tuorial _  
+_This is part of the original tutorial_ 
+
 This portion of the tutorial will guide you through the creation and customization of a voting app. It's important that you follow the steps in order, and make sure to customize the portions that are customizable.
 
 **Important.**
