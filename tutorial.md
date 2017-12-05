@@ -1,6 +1,5 @@
 <a id="top"></a>
 <img src="https://raw.githubusercontent.com/merapar/docker-tutorial/master/tutorial-images/logo.png" alt="docker logo">
-
 ### Thanks Docker for creating this tutorial, source is available at:
 https://github.com/merapar/docker-tutorial
 
@@ -573,7 +572,9 @@ $ docker rm myfirstapp
 ```
 
 <a id="dockercompetition"></a>
-## 3.0 Docker Training  
+## 3.0 Docker Training
+_This is part of the original tutorial_ 
+
 This portion of the tutorial will guide you through the creation and customization of a voting app. It's important that you follow the steps in order, and make sure to customize the portions that are customizable.
 
 **Important.**
