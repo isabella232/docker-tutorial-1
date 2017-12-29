@@ -1,5 +1,7 @@
-# Docker tutorial
+_UPDATE: The slides presented by Dennis Bell and Mikki Weesenaar of the Meetup are [available here](https://docs.google.com/presentation/d/1tOTCj51m6wYZ7wllzH6ppolkJu7ZM9j7MjVkD0PKKNg)._
 
+
+# Docker tutorial
 
 ### About the Docker tutorial :whale2: :boat:
 - [Docker App Architecture](#Docker-App-Architecture)
