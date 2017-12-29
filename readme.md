@@ -25,7 +25,8 @@ There will be a self-paced beginners’ tutorial for attendees to learn Docker b
 ### Pre-tutorial preparation
 At the training, you will need to bring your own computer. There are some steps you should do some preparation to get your work environment ready. Here are the steps:
 
-1. For MacOS users, need you to install [Docker engine MacOS](https://www.docker.com/docker-mac) and [Docker engine Windows](https://docs.docker.com/docker-for-windows/install/)
-[Docker compose](https://docs.docker.com/compose/install/).
+1. For MacOS users, you need to install [Docker engine MacOS](https://www.docker.com/docker-mac)  
+ For Windows users, you need to install [Docker engine Windows](https://docs.docker.com/docker-for-windows/)
+2. [Docker compose](https://docs.docker.com/compose/install/).
 
 And now you're ready. See you at the meetup!
